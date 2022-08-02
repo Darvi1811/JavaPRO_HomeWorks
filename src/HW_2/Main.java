@@ -11,7 +11,7 @@ public class Main {
         return b.reverse().toString().equalsIgnoreCase(a);
     }
     public static void main(String[] args) {
-        String a = "Glory to Ukraine!";
+        String a = "I love java!";
         String b = "loLoL";
         System.out.println(wordsCount(a));
         System.out.println(isPalindrome(b));
