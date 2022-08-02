@@ -4,7 +4,7 @@ import java.util.Locale;
 
 public class Main {
     static int wordsCount(String a) {
-        return a.split(" ").length;
+        return a.split("\\s+").length;
     }
     static boolean isPalindrome(String a) {
         StringBuilder b = new StringBuilder(a);
