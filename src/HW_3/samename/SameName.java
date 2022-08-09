@@ -1,4 +1,4 @@
-package HW_3.SameName1;
+package HW_3.samename;
 
 public class SameName {
 }
