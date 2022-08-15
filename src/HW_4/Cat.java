@@ -9,7 +9,7 @@ public class Cat extends Animal {
     }
 
     @Override
-    protected void run(int len) {
+    public void run(int len) {
         if (len<=200 & len>0) {
             System.out.println(name + " пробежал(а) " + len + " м.");
         } else {
@@ -18,7 +18,7 @@ public class Cat extends Animal {
     }
 
     @Override
-    protected void swim(int len) {
+    public void swim(int len) {
         System.out.println("Кошки и коты не умеют плавать.");
     }
 
