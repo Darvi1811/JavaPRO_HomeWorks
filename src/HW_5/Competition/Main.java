@@ -20,8 +20,7 @@ public class Main {
              participants) {
             for (Obstacle obstacle :
                     obstacles) {
-                participant.overcome(obstacle);
-                if (participant.isOvercome) {
+                if (participant.overcome(obstacle)) {
                 } else {
                     break;
                 }

@@ -5,7 +5,7 @@ public class Square implements GeometryInterface {
 
     public Square(double abcd) {
         if (abcd <= 0) {
-            throw new ArithmeticException("Радиус не может быть равен 0 или быть отрицательным!");
+            throw new ArithmeticException("Сторона не может быть равна 0 или быть отрицательной!");
         }
         this.abcd = abcd;
     }
@@ -13,5 +13,9 @@ public class Square implements GeometryInterface {
     @Override
     public double squareCalculator() {
         return abcd * abcd;
+    }
+
+    public double getAbcd() {
+        return abcd;
     }
 }

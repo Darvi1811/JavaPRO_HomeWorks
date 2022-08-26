@@ -12,7 +12,10 @@ public class Circle implements GeometryInterface{
 
     @Override
     public double squareCalculator() {
-        double pi = 3.141592653589793;
-        return r * r * pi;
+        return r * r * Math.PI;
+    }
+
+    public double getR() {
+        return r;
     }
 }
