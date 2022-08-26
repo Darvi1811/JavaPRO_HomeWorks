@@ -17,7 +17,7 @@ public class Triangle implements GeometryInterface{
     @Override
     public double squareCalculator() {
         double pHalf = (a+b+c)/2;
-        return ((pHalf-a)*(pHalf-b)*(pHalf-c));
+        return Math.sqrt(pHalf*(pHalf-a)*(pHalf-b)*(pHalf-c));
     }
 
     public double getA() {

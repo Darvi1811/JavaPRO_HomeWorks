@@ -10,7 +10,7 @@ public class Main {
         geometryInterfaces[4] = new Circle(10);
         geometryInterfaces[5] = new Circle(20);
         geometryInterfaces[6] = new Circle(30);
-        geometryInterfaces[7] = new Triangle(10, 20, 30);
+        geometryInterfaces[7] = new Triangle(10, 10, 10);
         geometryInterfaces[8] = new Triangle(20, 30, 40);
         geometryInterfaces[9] = new Triangle(30, 40, 50);
 
