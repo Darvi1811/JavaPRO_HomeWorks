@@ -5,13 +5,13 @@ import java.util.*;
 public class FileNavigator {
     private final Map<String, ArrayList<FileData>> paths = new HashMap<>();
 
-    void add(String filePath, FileData file) {
-        ArrayList<FileData> a = new ArrayList<>();
-        if (paths.containsKey(filePath)) {
-            a.add(paths.get(filePath).get(0));
+    void add(FileData file) {
+        if (paths.containsKey(file.getFilePath())) {
+            paths.get(file.getFilePath()).add(file);
+        } else {
+            paths.put(file.getFilePath(), new ArrayList<>());
+            paths.get(file.getFilePath()).add(file);
         }
-        a.add(file);
-        paths.put(filePath, a);
     }
 
     ArrayList<FileData> find(String filePath) {
@@ -30,8 +30,6 @@ public class FileNavigator {
                 }
             }
         }
-        // 6 пункт
-        files.sort(Comparator.comparing(FileData::getFileSize));
         return files;
     }
 
@@ -44,4 +42,15 @@ public class FileNavigator {
         }
     }
 
+    // 6 пункт
+    ArrayList<FileData> sortBySize() {
+        Collection<ArrayList<FileData>> values = paths.values();
+        ArrayList<FileData> files = new ArrayList<>();
+        for (List<FileData> a :
+                values) {
+            files.addAll(a);
+        }
+        files.sort(Comparator.comparing(FileData::getFileSize));
+        return files;
+    }
 }
