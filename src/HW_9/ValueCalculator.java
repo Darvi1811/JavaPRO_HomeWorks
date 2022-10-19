@@ -27,9 +27,10 @@ public class ValueCalculator implements Runnable {
         Thread thread2 = new Thread(valueCalculator2);
         thread1.start();
         thread2.start();
-        double[] result = DoubleStream.concat(Arrays.stream(doubleListClone1), Arrays.stream(doubleListClone2)).toArray();
         thread1.join();
         thread2.join();
+
+        double[] result = DoubleStream.concat(Arrays.stream(doubleListClone1), Arrays.stream(doubleListClone2)).toArray();
 
         System.out.println(System.currentTimeMillis() - start + " milliseconds.");
     }
